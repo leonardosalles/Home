@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="black">
+    <ion-buttons slot="start">
+      <ion-back-button [text]="'Voltar'"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>{{area === 'None' ? 'Outros' : area}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="default-content">
+    <div class="content-wrapper">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Iluminação</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content [ngClass]="{'one-item': lamps && lamps.length === 1}">
+            <ion-button *ngFor="let lamp of lamps; let i = index" color="dark" class="btn-place" (click)="toggleLamp(lamp)">
+              <div class="wrapper">
+                <div class="wrapper-img" [ngClass]="{'is-on': lamp.isOn && !lamp.isLoading }">
+                  <ion-spinner name="bubbles" color="primary" *ngIf="lamp.isLoading"></ion-spinner>
+                  <img src="/assets/icon/light-on.svg" class="oven" *ngIf="lamp.isOn && !lamp.isLoading" />
+                  <img src="/assets/icon/light-off.svg" class="oven" *ngIf="!lamp.isOn && !lamp.isLoading" />
+                </div>
+    
+                <span [ngClass]="{'is-on': lamp.isOn && !lamp.isLoading }">{{lamp.description}}</span>
+              </div>
+            </ion-button>
+
+            <ion-button *ngFor="let ledStripe of ledStripes; let i = index" color="dark" class="btn-place" (click)="openLedDialog(ledStripe)">
+              <div class="wrapper">
+                <div class="wrapper-img" [ngClass]="{'is-on': ledStripe.isOn && !ledStripe.isLoading }">
+                  <ion-spinner name="bubbles" color="primary" *ngIf="ledStripe.isLoading"></ion-spinner>
+                  <img src="/assets/icon/led-on.svg" class="oven" *ngIf="ledStripe.isOn && !ledStripe.isLoading" />
+                  <img src="/assets/icon/led-off.svg" class="oven" *ngIf="!ledStripe.isOn && !ledStripe.isLoading" />
+                </div>
+    
+                <span [ngClass]="{'is-on': ledStripe.isOn && !ledStripe.isLoading }">{{ledStripe.description}}</span>
+              </div>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Multimídia</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content [ngClass]="{'one-item': tvs && tvs.length === 1}">
+            <ion-button color="dark" class="btn-place" (click)="presentRemoteControl(tv)">
+              <div class="wrapper" [ngClass]="{'is-on': tv.isOn && !tv.isLoading }">
+                <ion-icon name="tv" class="tv-icon"></ion-icon>
+                <span>{{tv.name}}</span>
+              </div>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

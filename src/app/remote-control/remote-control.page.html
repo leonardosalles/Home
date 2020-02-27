@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar color="black">
+    <ion-title>Controle Remoto</ion-title>
+
+    <ion-buttons slot="end">
+        <ion-button (click)="close()">Fechar</ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <div class="remote-round">
+          <ion-button class="btn-arrow up" (click)="sendKey('UP')" mode="md">
+              <ion-icon name="ios-arrow-up"></ion-icon>
+          </ion-button>
+
+          <ion-button class="btn-arrow down" (click)="sendKey('DOWN')" mode="md">
+              <ion-icon name="ios-arrow-down"></ion-icon>
+          </ion-button>
+
+          <ion-button class="btn-arrow left" (click)="sendKey('LEFT')" mode="md">
+              <ion-icon name="ios-arrow-back"></ion-icon>
+          </ion-button>
+
+          <ion-button class="btn-arrow right" (click)="sendKey('RIGHT')" mode="md">
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+          </ion-button>
+
+          <ion-button class="btn-middle" (click)="sendKey('ENTER')" mode="md">
+            <small>enter</small>
+          </ion-button>
+        </div>
+      </ion-col>
+
+      <ion-col size="12" size-md="6">
+        <ion-row>
+          <ion-col size="4" text-center>
+            <ion-button class="btn-default btn-sup" (click)="sendKey('SOURCE')" mode="md">
+              <small>SOURCE</small>
+            </ion-button>
+
+            <div class="wrapper-btn-group">
+              <div class="group-btn">
+                <ion-button (click)="sendKey('CHUP')" class="btn-integrated" mode="md">
+                  <ion-icon name="ios-arrow-up"></ion-icon>
+                </ion-button>
+
+                <span class="btn-integration">CHL</span>
+
+                <ion-button (click)="sendKey('CHDOWN')" class="btn-integrated down" mode="md">
+                  <ion-icon name="ios-arrow-down"></ion-icon>
+                </ion-button>
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size="4" text-center>
+            <ion-button class="btn-default btn-sup" (click)="sendKey('HOME')" mode="md">
+              <ion-icon name="home"></ion-icon>
+            </ion-button>
+
+            <ion-button color="danger" (click)="toggleTvPower()" mode="md">
+              <ion-icon name="power"></ion-icon>
+            </ion-button>
+
+            <ion-button class="btn-default btn-ammend" (click)="togglePlayPause()" mode="md">
+              <ion-icon name="md-skip-forward"></ion-icon>
+            </ion-button>
+
+            <ion-button class="btn-default btn-ammend" (click)="sendKey('RETURN')" mode="md">
+              <ion-icon name="return-left"></ion-icon>
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="4" text-center>
+            <ion-button class="btn-default btn-sup" (click)="sendKey('MUTE')" mode="md">
+              <small>MUTE</small>
+            </ion-button>
+
+            <div class="wrapper-btn-group">
+              <div class="group-btn">
+                <ion-button (click)="sendKey('VOLUP')" class="btn-integrated" mode="md">
+                  <ion-icon name="add"></ion-icon>
+                </ion-button>
+
+                <span class="btn-integration">VOL</span>
+
+                <ion-button (click)="sendKey('VOLDOWN')" class="btn-integrated down" mode="md">
+                  <ion-icon name="remove"></ion-icon>
+                </ion-button>
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col text-center>
+            <ion-button class="btn-default btn-colors" mode="md">
+              <div class="mini-ball red"></div>
+              <div class="mini-ball green"></div>
+              <div class="mini-ball yellow"></div>
+              <div class="mini-ball blue"></div>
+            </ion-button>
+          </ion-col>
+
+          <ion-col>
+            <div class="column-status" [ngClass]="{'on': tv.isOn, 'off': !tv.isOn }">
+              <span class="tv-status" [ngClass]="{'on': tv.isOn }"></span>
+              {{ tv.isOn ? 'Ligada' : 'Desligada'}}
+            </div>
+          </ion-col>
+
+          <ion-col text-center>
+            <ion-button class="btn-default" mode="md" (click)="openModalText()">
+              <small>ABC</small>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

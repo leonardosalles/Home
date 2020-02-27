@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar color="black">
+    <ion-title>
+      Início
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="default-content">
+  <div class="content-wrapper">
+    <ion-card class="card-welcome">
+      <ion-card-header>
+        <ion-card-subtitle>{{getMessage()}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <p *ngIf="hour">
+        São <strong class="hour">{{hour}}</strong> do dia <strong>{{today}}</strong>.
+      </p>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Ambientes</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-button color="dark" class="btn-place" [routerLink]="'/tabs/home/comodo/cozinha'">
+          <div class="wrapper">
+            <div class="wrapper-img">
+              <img src="/assets/icon/oven.svg" class="oven" />
+            </div>
+
+            <span>Cozinha</span>
+          </div>
+        </ion-button>
+
+        <ion-button color="dark" class="btn-place" [routerLink]="'/tabs/home/comodo/living'">
+          <div class="wrapper">
+            <div class="wrapper-img">
+              <img src="/assets/icon/sofa.svg" />
+            </div>
+
+            <span>Living</span>
+          </div>
+        </ion-button>
+
+        <ion-button color="dark" class="btn-place" [routerLink]="'/tabs/home/comodo/corredor'">
+          <div class="wrapper">
+            <div class="wrapper-img">
+              <img src="/assets/icon/shoe.svg" />
+            </div>
+
+            <span>Circulação</span>
+          </div>
+        </ion-button>
+
+        <ion-button color="dark" class="btn-place" [routerLink]="'/tabs/home/comodo/suite'">
+          <div class="wrapper">
+            <div class="wrapper-img">
+              <img src="/assets/icon/bed.svg" />
+            </div>
+
+            <span>Suíte</span>
+          </div>
+        </ion-button>
+        
+        <ion-button color="dark" class="btn-place" [routerLink]="'/tabs/home/comodo/quarto'">
+            <div class="wrapper">
+              <div class="wrapper-img">
+                <img src="/assets/icon/baby.svg" class="baby" />
+              </div>
+  
+              <span>Quarto</span>
+            </div>
+          </ion-button>
+
+        <ion-button color="dark" class="btn-place" [routerLink]="'/tabs/home/comodo/escritorio'">
+            <div class="wrapper">
+              <div class="wrapper-img">
+                <img src="/assets/icon/computer.svg" class="office" />
+              </div>
+  
+              <span>Escritório</span>
+            </div>
+          </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card-welcome">
+      <ion-card-content>
+        <ion-button color="dark" expand="block" style="width: 100%" [routerLink]="'/tabs/home/comodo/none'">
+          Outros
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Previsão do Tempo</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label>
+            <div class="wrapper-weather-item">
+              <img src="/assets/weather/sun.svg" class="weather-img" />
+              {{lpad(9)}}h - <strong>31º ensolarado</strong>
+            </div>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <div class="wrapper-weather-item">
+              <img src="/assets/weather/cloudy.svg" class="weather-img" />
+              {{lpad(14)}}h - <strong>31º nublado</strong>
+            </div>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <div class="wrapper-weather-item">
+              <img src="/assets/weather/rain.svg" class="weather-img" />
+              {{lpad(19)}}h - <strong>27º chuvendo</strong>
+            </div>
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <div class="wrapper-weather-item">
+              <img src="/assets/weather/storm.svg" class="weather-img" />
+              {{lpad(22)}}h - <strong>27º tempestade</strong>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+</ion-content>

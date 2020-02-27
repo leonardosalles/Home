@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="black">
+    <ion-title>{{ledStripe.description}}</ion-title>
+
+    <ion-buttons slot="end">
+        <ion-button (click)="close()">Fechar</ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item lines="none" (click)="toggleLedStripe(ledStripe)">
+      <ion-label>{{ ledStripe.isOn ? 'Ligado' : 'Desligado'}}</ion-label>
+      <ion-toggle [(checked)]="ledStripe.isOn"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <div class="color-picker-wrapper">
+    <div class="color-picker-block" *ngIf="!ledStripe.isOn"></div>
+    <div id="color-picker-container"></div>
+  </div>
+
+  <ion-list style="margin-top: 15px;">
+    <ion-item lines="none">
+      <ion-range min="1" max="110" step="1" (ionChange)="changeIntensity()" [(ngModel)]="ledStripe.intensity" [(disabled)]="!ledStripe.isOn">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <div class="colors-wrapper">
+    <div class="color-picker-block" *ngIf="!ledStripe.isOn"></div>
+    <ion-grid>
+      <ion-col class="white" (click)="onColorChange({ hexString: 'ffffff' })"></ion-col>
+      <ion-col class="orange" (click)="onColorChange({ hexString: 'ff4800' })"></ion-col>
+      <ion-col class="green" (click)="onColorChange({ hexString: '22ff00' })"></ion-col>
+      <ion-col class="cyan" (click)="onColorChange({ hexString: '00ffea' })"></ion-col>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-col class="blue" (click)="onColorChange({ hexString: '0011ff' })"></ion-col>
+      <ion-col class="pink" (click)="onColorChange({ hexString: 'ff0048' })"></ion-col>
+      <ion-col class="yellow" (click)="onColorChange({ hexString: 'ffeb3b' })"></ion-col>
+      <ion-col class="red" (click)="onColorChange({ hexString: 'ff0000' })"></ion-col>
+    </ion-grid>
+  </div>
+</ion-content>

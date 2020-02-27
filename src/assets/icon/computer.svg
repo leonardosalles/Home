@@ -1,0 +1,21 @@
+<svg height="60pt" viewBox="0 -3 60 60" width="60pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <linearGradient id="a">
+        <stop offset="0" stop-color="#30bf8c" />
+        <stop offset="1" stop-color="#1f7988" />
+    </linearGradient>
+    <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="1" x2="63.65" xlink:href="#a" y1="27" y2="27" />
+    <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="1" x2="63.65" xlink:href="#a" y1="29" y2="29" />
+    <linearGradient id="d" gradientUnits="userSpaceOnUse" x1="1" x2="63.65" xlink:href="#a" y1="19" y2="19" />
+    <linearGradient id="e" gradientUnits="userSpaceOnUse" x1="1" x2="63.65" xlink:href="#a" y1="12" y2="12" />
+    <linearGradient id="f" gradientUnits="userSpaceOnUse" x1="1" x2="63.65" xlink:href="#a" y1="14" y2="14" />
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="1" x2="63.65" xlink:href="#a" y1="37" y2="37" />
+    <path d="m57 0h-54c-1.65625 0-3 1.34375-3 3v36c0 1.65625 1.34375 3 3 3h23v6h-12c-1.65625 0-3 1.34375-3 3v3h38v-3c0-1.65625-1.34375-3-3-3h-12v-6h23c1.65625 0 3-1.34375 3-3v-36c0-1.65625-1.34375-3-3-3zm-11 50c.550781 0 1 .449219 1 1v1h-34v-1c0-.550781.449219-1 1-1zm-14-2h-4v-6h4zm26-9c0 .550781-.449219 1-1 1h-54c-.550781 0-1-.449219-1-1v-36c0-.550781.449219-1 1-1h54c.550781 0 1 .449219 1 1zm0 0" fill="url(#b)" />
+    <path d="m46 28h2v2h-2zm0 0" fill="url(#c)" />
+    <path d="m50 28h2v2h-2zm0 0" fill="url(#c)" />
+    <path d="m4 34h52v-30h-52zm2-28h48v26h-48zm0 0" fill="url(#d)" />
+    <path d="m8 16h2v-6h4v-2h-6zm0 0" fill="url(#e)" />
+    <path d="m8 18h2v2h-2zm0 0" fill="url(#d)" />
+    <path d="m32 13h2v2h-2zm0 0" fill="url(#f)" />
+    <path d="m36 13h4v2h-4zm0 0" fill="url(#f)" />
+    <path d="m27 36h6v2h-6zm0 0" fill="url(#g)" />
+</svg>

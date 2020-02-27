@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" width="512" height="512">
+    <defs>
+        <linearGradient id="linear-gradient" x1="1" y1="32" x2="63.514" y2="32" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#30bf8c" />
+            <stop offset="0.186" stop-color="#0ea28c" />
+            <stop offset="0.52" stop-color="#1f7988" />
+            <stop offset="1" stop-color="#30bf8c" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" y1="38" x2="63.514" y2="38" xlink:href="#linear-gradient" />
+        <linearGradient id="linear-gradient-3" y1="19" x2="63.514" y2="19" xlink:href="#linear-gradient" />
+        <linearGradient id="linear-gradient-8" y1="38" x2="63.514" y2="38" gradientTransform="translate(39.208 -2.397) rotate(53.141)" xlink:href="#linear-gradient" />
+        <linearGradient id="linear-gradient-9" y1="38" x2="63.514" y2="38" gradientTransform="translate(42.809 -9.598) rotate(53.141)" xlink:href="#linear-gradient" />
+        <linearGradient id="linear-gradient-10" y1="38" x2="63.514" y2="38" gradientTransform="translate(46.811 -17.599) rotate(53.141)" xlink:href="#linear-gradient" />
+        <linearGradient id="linear-gradient-11" y1="9" x2="63.514" y2="9" xlink:href="#linear-gradient" />
+        <linearGradient id="linear-gradient-16" y1="23.854" x2="63.514" y2="23.854" xlink:href="#linear-gradient" />
+    </defs>
+    <g id="Gradient_outline" data-name="Gradient outline">
+        <path d="M2,62H62V2H2ZM4,4H60V14H4ZM4,16H60V52H4ZM4,54H60v6H4Z" style="fill:url(#linear-gradient)" />
+        <path d="M11,48H53V28H11Zm2-18H51V46H13Z" style="fill:url(#linear-gradient-2)" />
+        <rect x="11" y="18" width="14" height="2" style="fill:url(#linear-gradient-3)" />
+        <rect x="39" y="18" width="14" height="2" style="fill:url(#linear-gradient-3)" />
+        <rect x="27" y="18" width="2" height="2" style="fill:url(#linear-gradient-3)" />
+        <rect x="31" y="18" width="2" height="2" style="fill:url(#linear-gradient-3)" />
+        <rect x="35" y="18" width="2" height="2" style="fill:url(#linear-gradient-3)" />
+        <rect x="17" y="37" width="10" height="1.999" transform="translate(-21.601 32.809) rotate(-53.141)" style="fill:url(#linear-gradient-8)" />
+        <rect x="26" y="37" width="10" height="1.999" transform="translate(-18 40.01) rotate(-53.141)" style="fill:url(#linear-gradient-9)" />
+        <rect x="36" y="37" width="10" height="1.999" transform="translate(-13.998 48.011) rotate(-53.141)" style="fill:url(#linear-gradient-10)" />
+        <path d="M32,6a3,3,0,1,0,3,3A3,3,0,0,0,32,6Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,32,10Z" style="fill:url(#linear-gradient-11)" />
+        <path d="M23,6a3,3,0,1,0,3,3A3,3,0,0,0,23,6Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,23,10Z" style="fill:url(#linear-gradient-11)" />
+        <path d="M14,6a3,3,0,1,0,3,3A3,3,0,0,0,14,6Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,14,10Z" style="fill:url(#linear-gradient-11)" />
+        <path d="M50,6a3,3,0,1,0,3,3A3,3,0,0,0,50,6Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,50,10Z" style="fill:url(#linear-gradient-11)" />
+        <path d="M41,6a3,3,0,1,0,3,3A3,3,0,0,0,41,6Zm0,4a1,1,0,1,1,1-1A1,1,0,0,1,41,10Z" style="fill:url(#linear-gradient-11)" />
+        <polygon points="22.293 24.293 23.707 25.707 25.414 24 38.586 24 40.293 25.707 41.707 24.293 39.414 22 24.586 22 22.293 24.293" style="fill:url(#linear-gradient-16)" />
+    </g>
+</svg>

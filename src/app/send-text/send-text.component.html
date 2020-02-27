@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="black">
+    <ion-title>Texto</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding scrollY="false">
+  <div class="input-wrapper">
+    <input type="text" [(ngModel)]="filter.text">
+  </div>
+
+  <div class="button-wrapper">
+    <ion-button mode="md" class="btn-default" color="primary" (click)="clearText()"><span>Limpar</span></ion-button>
+    <ion-button mode="md" class="btn-default" color="primary" (click)="sendText()"><span>Enviar</span></ion-button>
+  </div>
+</ion-content>

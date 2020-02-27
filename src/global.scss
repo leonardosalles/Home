@@ -1,0 +1,31 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+.ion-color-black {
+    --ion-color-base: #000000;
+    --ion-color-base-rgb: 105,187,123;
+    --ion-color-contrast: var(--ion-color-primary);
+    --ion-color-contrast-rgb: 255,255,255;
+    --ion-color-shade: #5ca56c;
+    --ion-color-tint: var(--ion-color-primary);
+}
+
+.default-content {
+    background: url('/assets/background_dark.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.send-text-dialog .modal-wrapper {
+    width: 260px;
+    height: 170px;
+}
